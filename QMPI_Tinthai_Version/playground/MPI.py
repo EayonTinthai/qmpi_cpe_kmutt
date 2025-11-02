@@ -74,6 +74,12 @@ class EPRsetup:
             qq.x(self.EPRdestbit)
         qq.h(self.srcBit)
         self.recieveEPR(qq, self.srcBit,self.Csrcbit)
+
+        # ### This is Tinthai recommendation ###
+        # # We need to put barrier after measurement
+        # # To eliminate the wrong phase
+        # qq.barrier(self.srcBit, self.EPRsrcbit, self.EPRdestbit)
+
         #qq.z(self.EPRdestbit).c_if(self.Csrcbit2,1)
         with qq.if_test((self.Csrcbit,1)):
             qq.z(self.EPRdestbit)
