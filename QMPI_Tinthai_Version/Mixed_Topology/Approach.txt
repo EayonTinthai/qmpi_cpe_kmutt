@@ -1,0 +1,32 @@
+Method 1: Central Node as Source (CNS)
+The Root node is the entanglement generator. Do NOT use Point-to-Point teleportation in a loop. Implement the following steps:
+
+Phase 1: GHZ Generation & Distribution
+1. Root node creates an N-qubit GHZ state entirely inside its local quantum memory.
+2. Root node keeps 1 qubit of the GHZ state for itself.
+3. Root node sends the remaining N-1 qubits over the physical quantum links to the N-1 client nodes.
+4. Clients wait to receive their respective GHZ qubit and store it in their local memory.
+
+Phase 2: Teleportation (Broadcast)
+5. Root node performs a Bell State Measurement (BSM) between its original 'Data Qubit' (the message) and its local GHZ qubit (using CNOT and Hadamard, then measure).
+6. Root node sends the 2 classical measurement bits to all N-1 clients via classical channels.
+7. All clients receive the classical bits and apply the corresponding Pauli corrections (X and/or Z) to their local GHZ qubits. The broadcast is complete.
+
+
+Method 2: Central Node as Switch (CNSw)
+The Root node acts as an entanglement swapping hub. Do NOT generate the GHZ state locally at the root. Implement the following steps:
+
+Phase 1: Bipartite Entanglement Generation
+1. All N-1 client nodes generate a standard bipartite EPR pair (Bell state) with the Root node simultaneously (or sequentially depending on switch capacity).
+2. Now, the Root node holds N-1 qubits in its memory (each entangled with a different client).
+
+Phase 2: GHZ Fusion (Entanglement Swapping)
+3. Root node performs a local fusion operation on the N-1 EPR-halves it holds to stitch them into a single N-partite GHZ state. (e.g., Root prepares a new local |+> ancilla, applies CNOTs to the N-1 EPR-halves, measures them in the X-basis).
+4. Root node broadcasts the classical measurement results of the fusion step to the clients.
+5. Clients apply Pauli-Z corrections based on the fusion results. Now, a global GHZ state is established across all nodes.
+
+Phase 3: Teleportation (Broadcast)
+6. Root node uses its remaining local qubit (from the fusion step) as its part of the GHZ state.
+7. Root node performs BSM between the 'Data Qubit' and this GHZ qubit.
+8. Root node broadcasts the 2 classical bits.
+9. Clients apply Pauli corrections. The broadcast is complete.
