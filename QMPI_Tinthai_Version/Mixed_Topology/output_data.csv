@@ -1,0 +1,31 @@
+Topology,Fake_backend,CD,EN,PC
+factory node,fake_auckland,0.6144,0.5079,0.0409
+factory node,fake_brisbane,0.6179,0.137,0.0019
+factory node,fake_kawasaki,0.6169,0.134,0.0019
+factory node,fake_peekskill,0.6304,0.1337,0.0408
+factory node,fake_quebec,0.6194,0.137,0.0019
+factory node,fake_torino,0.6054,0.1989,0.0018
+Shi Y.,fake_auckland,0.5795,0.3506,0.0381
+Shi Y.,fake_brisbane,0.6091,0.124,0.0017
+Shi Y.,fake_kawasaki,0.6185,0.1245,0.0017
+Shi Y.,fake_peekskill,0.5956,0.1247,0.0381
+Shi Y.,fake_quebec,0.6086,0.1248,0.0017
+Shi Y.,fake_torino,0.6137,0.1815,0.0016
+Expose Netqmpi,fake_auckland,0.3889,0.3051,0.0513
+Expose Netqmpi,fake_brisbane,0.3889,0.1118,0.0022
+Expose Netqmpi,fake_kawasaki,0.3889,0.1259,0.0022
+Expose Netqmpi,fake_peekskill,0.3889,0.1111,0.0513
+Expose Netqmpi,fake_quebec,0.3889,0.0938,0.0022
+Expose Netqmpi,fake_torino,0.3889,0.125,0.0021
+Expose edit,fake_auckland,0.1667,0.3051,0.0513
+Expose edit,fake_brisbane,0.1667,0.1023,0.0022
+Expose edit,fake_kawasaki,0.1667,0.0845,0.0022
+Expose edit,fake_peekskill,0.1667,0.0865,0.0513
+Expose edit,fake_quebec,0.1667,0.087,0.0022
+Expose edit,fake_torino,0.1667,0.1208,0.0021
+2-switch,fake_auckland,0.607,0.4767,0.0469
+2-switch,fake_brisbane,0.6057,0.1313,0.0022
+2-switch,fake_kawasaki,0.6101,0.1313,0.0022
+2-switch,fake_peekskill,0.6336,0.1268,0.0468
+2-switch,fake_quebec,0.6162,0.1323,0.0022
+2-switch,fake_torino,0.5971,0.1933,0.002
